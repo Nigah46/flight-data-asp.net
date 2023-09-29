@@ -1,0 +1,43 @@
+﻿@page
+@model newproject.Pages.CustomerListModel
+@{
+}
+
+
+
+<a class="btn btn-primary " href="/Create"> Enter the customer details here </a>
+
+
+<h1> customer list </h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                id</th>
+            <th>name</th>
+            <th>contact</th>
+            <th>address</th>
+            <th>destination</th>
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+        @foreach ( var item in Model.customerList)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.contact</td>
+                <td>@item.address</td>
+                <td>@item.destination</td>
+
+             
+            </tr>
+        }
+       
+    </tbody>
+
+</table>

@@ -56,13 +56,17 @@ namespace newproject.Pages
             }
             catch (Exception ex)
             {
-                errormessage = ex.Message;
-
+                errormessage = "problem with your credentials ";
+                Console.WriteLine(ex.ToString());
             }
-            //Response.Redirect("/login");
-            successmessage = "your data has been accepted ";
+            Response.Redirect("/CustomerList");
+           // successmessage = "your data has been accepted ";
 
+            customerInfo.id = "";
             customerInfo.name = "";
+            customerInfo.contact = "";
+            customerInfo.address = "";
+            customerInfo.destination = "";
 
             
         }
